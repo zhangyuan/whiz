@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whiz</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/application.css">
+    <script type="text/javascript" src="./javascripts/browserMqtt.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./javascripts/handlebars-v4.0.2.js"></script>
+    <script type="text/javascript" src="./javascripts/application.js"></script>
+</head>
+<body>
+    <form action="#" class="username-form">
+        <label for="username">username</label>
+        <input type="text" name="username">
+        <input type="submit" value="update">
+    </form>
+    <div id="notification">You have new unread messages.</div>
+    <div id="messages"></div>
+
+    <script id="message-template" type="text/x-handlebars-template">
+        {{#each messages}}
+        <article class="message unread">
+            <section class="content">
+                <header>
+
+                    @<span class="name">{{from}}</span> said to @<span class="name">{{to}}</span> :
+                    <span class="message-id">#{{id}}</span>
+                </header>
+                <p>
+                    {{content}}
+                </p>
+            </section>
+        </article>
+        {{/each}}
+    </script>
+</body>
+</html>

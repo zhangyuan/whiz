@@ -1,0 +1,26 @@
+.username-form {
+    margin: 1em;
+}
+#notification {
+    display: none;
+    margin: 1em;
+}
+
+#messages .message {
+    border: 1px solid #DDD;
+    padding: 1em;
+    margin: 1em;
+}
+
+#messages .message.unread {
+    background-color: #FFF8DC;
+}
+
+#messages .message p {
+    margin-left: 2em;
+}
+
+.message-id {
+    display: inline-block;
+    float: right;
+}
