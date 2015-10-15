@@ -22,7 +22,7 @@ mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf
 
 ### Run the service
 
-The service uses H2 database in memory, so there is no need to setup external database service. And the databse will be drap and then created every time ther service starts.
+The service uses H2 database in memory, so there is no need to setup external database service. And the databse will be dropped and then created every time ther service starts.
 
 ```
 ./gradlew jettyRun
